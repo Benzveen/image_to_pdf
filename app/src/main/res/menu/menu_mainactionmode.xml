@@ -1,0 +1,37 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_copyTo"
+        android:icon="@drawable/ic_content_copy_black_24dp"
+        android:orderInCategory="100"
+        android:title="Share"
+        android:iconTint="@android:color/white"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_share"
+        android:icon="@drawable/ic_menu_share"
+        android:orderInCategory="100"
+        android:title="Share"
+        android:iconTint="@android:color/white"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_delete"
+        android:icon="@drawable/ic_delete_black_24dp"
+        android:orderInCategory="100"
+        android:title="Delete"
+        android:iconTint="@android:color/white"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/select_all"
+        android:icon="@drawable/ic_done_all_black_24dp"
+        android:tooltipText="Select all"
+        android:orderInCategory="100"
+        android:title="Select all"
+        android:iconTint="@android:color/white"
+        app:showAsAction="always" />
+
+</menu>

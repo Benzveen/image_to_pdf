@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#388E3C</color>
+    <color name="colorPrimaryDark">#388E3C</color>
+    <color name="colorAccent">#23C40C</color>
+    <color name="white">#FFFFFF</color>
+    <color name="banner">#8D242920</color>
+    <color name="pointer">#B9B7B7</color>
+    <color name="overlay">#4A32740A</color>
+    <color name="grey_5">#F2F2F2</color>
+    <color name="grey_90">#263238</color>
+    <color name="grey_91">#C6263238</color>
+    <color name="grey_40">#999999</color>
+</resources>

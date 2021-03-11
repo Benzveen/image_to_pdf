@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/card_parent"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="3dp">
+
+    <LinearLayout
+        android:id="@+id/lyt_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="12dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_iconfinder_24_2133056" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="5dp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bottomMenuView"
+            android:background="@color/colorAccent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="Two Line"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                    android:textColor="@android:color/white" />
+
+
+                <TextView
+                    android:id="@+id/brief"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="12dp"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="Support Text"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:id="@+id/extramenu"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_more_vert_black_24dp"
+                android:tint="@android:color/white" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="15dp"
+            android:layout_height="0dp" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

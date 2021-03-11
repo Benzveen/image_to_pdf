@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ImageToPDF">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/myCoordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f6f6f6"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/toDoEmptyView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="8dp"
+                    android:text="Tap"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="20sp" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_add_black_24dp"
+                    android:tint="@android:color/white"
+                    app:backgroundTint="@color/colorAccent"
+                    app:fabSize="mini" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="8dp"
+                    android:text="to add image files "
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.benzveen.imagetopdf.Utils.RecyclerViewEmptySupport
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:scrollingCache="true" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:id="@+id/parentfloatbutton"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom|end|right"
+            android:layout_marginBottom="47dp"
+            android:gravity="bottom|end|right"
+            android:orientation="vertical">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/addFilesFAB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_smlarge"
+                android:layout_marginTop="@dimen/spacing_middle"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="@dimen/spacing_middle"
+                android:src="@drawable/ic_folder_black_24dp"
+                android:tint="@android:color/white"
+                app:fabSize="mini" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/addCameraFAB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_smlarge"
+                android:layout_marginTop="@dimen/spacing_middle"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="@dimen/spacing_middle"
+                android:src="@drawable/ic_photo_camera_black_24dp"
+                android:tint="@android:color/white"
+                app:fabSize="mini" />
+
+            <LinearLayout
+                android:id="@+id/lyt_addFiles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|end|right"
+                    android:layout_margin="@dimen/spacing_middle"
+                    app:cardBackgroundColor="@color/colorAccent"
+                    app:cardCornerRadius="3dp"
+                    app:cardElevation="2dp"
+                    app:contentPadding="@dimen/spacing_medium">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Add Images"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:textColor="@color/white" />
+
+                </androidx.cardview.widget.CardView>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fabadd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginLeft="@dimen/spacing_smlarge"
+                    android:layout_marginTop="@dimen/spacing_middle"
+                    android:layout_marginRight="@dimen/spacing_smlarge"
+                    android:layout_marginBottom="@dimen/spacing_middle"
+                    android:tint="@android:color/white"
+                    app:srcCompat="@drawable/ic_add_black_24dp" />
+
+                <View
+                    android:layout_width="@dimen/spacing_xmedium"
+                    android:layout_height="0dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lyt_addCloudFiles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|end|right"
+                    android:layout_margin="@dimen/spacing_middle"
+                    app:cardBackgroundColor="@color/colorAccent"
+                    app:cardCornerRadius="3dp"
+                    app:cardElevation="2dp"
+                    app:contentPadding="@dimen/spacing_medium">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Convert to PDF"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:textColor="@color/white" />
+                </androidx.cardview.widget.CardView>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/converttopdf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginLeft="@dimen/spacing_smlarge"
+                    android:layout_marginTop="@dimen/spacing_middle"
+                    android:layout_marginRight="@dimen/spacing_smlarge"
+                    android:layout_marginBottom="@dimen/spacing_middle"
+                    android:scaleType="center"
+                    app:srcCompat="@drawable/ic_image_to_pdf" />
+
+                <View
+                    android:layout_width="@dimen/spacing_xmedium"
+                    android:layout_height="0dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lyt_documentCollage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|end|right"
+                    android:layout_margin="@dimen/spacing_middle"
+                    app:cardBackgroundColor="@color/colorAccent"
+                    app:cardCornerRadius="3dp"
+                    app:cardElevation="2dp"
+                    app:contentPadding="@dimen/spacing_medium">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Document Collage (Beta)"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:textColor="@color/white" />
+                </androidx.cardview.widget.CardView>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/collageit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginLeft="@dimen/spacing_smlarge"
+                    android:layout_marginTop="@dimen/spacing_middle"
+                    android:layout_marginRight="@dimen/spacing_smlarge"
+                    android:layout_marginBottom="@dimen/spacing_middle"
+                    android:tint="@android:color/white"
+                    app:srcCompat="@drawable/ic_collage" />
+                app:srcCompat="@drawable/ic_image_to_pdf" />
+
+                <View
+                    android:layout_width="@dimen/spacing_xmedium"
+                    android:layout_height="0dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>
